@@ -89,7 +89,7 @@ function generateUserId() {
     return `USR-${String(userCounter++).padStart(4, '0')}`;
 }
 
-async function main() {
+export async function seedDatabase() {
     console.log('Wiping database...');
     await prisma.activity.deleteMany({});
     await prisma.project.deleteMany({});
@@ -224,11 +224,14 @@ async function main() {
     console.log('Seed completed successfully!');
 }
 
-main()
-    .catch(e => {
-        console.error(e);
-        process.exit(1);
-    })
-    .finally(async () => {
-        await prisma.$disconnect();
-    });
+// Only run automatically if called directly from command line
+if (require.main === module) {
+    seedDatabase()
+        .catch((e) => {
+            console.error(e);
+            process.exit(1);
+        })
+        .finally(async () => {
+            await prisma.$disconnect();
+        });
+}
