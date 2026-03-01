@@ -1,0 +1,92 @@
+.header {
+    height: 72px;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-search {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-tertiary);
+    border-radius: var(--radius-md);
+    padding: 8px 16px;
+    width: 320px;
+}
+
+.search-icon {
+    color: var(--text-tertiary);
+    margin-right: 8px;
+}
+
+.header-search input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+}
+
+.header-search input::placeholder {
+    color: var(--text-tertiary);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover {
+    background-color: var(--bg-tertiary);
+    color: var(--text-primary);
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 16px;
+    border-left: 1px solid var(--border-color);
+}
+
+.profile-icon {
+    color: var(--text-secondary);
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.profile-role {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    text-transform: capitalize;
+}

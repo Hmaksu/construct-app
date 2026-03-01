@@ -1,0 +1,41 @@
+.project-link {
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+.filters-group {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+}
+
+.filter-item select {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id                 String   @id // e.g., USR-001
+  name               String
+  role               String
+  assignedLocationId String?
+
+  activities         Activity[]
+  projects           Project[]
+}
+
+model Project {
+  id        String   @id // e.g., P-TR-001
+  name      String
+  type      String   @default("other") // 'road' | 'sewage' | 'gas' | 'electricity' | 'other'
+  country   String
+  region    String
+  city      String
+  location  String?  // Single-string location (Phase 16)
+  siteId    String
+  status    String   // 'planning' | 'in_progress' | 'completed' | 'delayed'
+  budget    Float
+  startDate String
+  endDate   String
+  progress  Int
+
+  assigneeId String?
+  assignee   User?    @relation(fields: [assigneeId], references: [id])
+
+  activities Activity[]
+}
+
+model Activity {
+  id           String   @id // e.g., ACT-001 or FND-100
+  projectId    String
+  name         String
+  category     String?
+  status       String   // 'pending' | 'active' | 'completed' | 'delayed'
+  startDate    String
+  endDate      String
+  
+  predecessors String
+  successors   String
+
+  assigneeId   String?
+  assignee     User?    @relation(fields: [assigneeId], references: [id])
+  project      Project  @relation(fields: [projectId], references: [id], onDelete: Cascade)
+}

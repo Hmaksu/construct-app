@@ -1,0 +1,30 @@
+.role-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--bg-tertiary);
+    padding: 6px 12px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.role-switcher-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.role-switcher-select {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+    padding-right: 4px;
+}
+
+.role-switcher-select:focus {
+    outline: none;
+}
