@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { seedDatabase } from '../../../../../prisma/reset-seed';
+import { seedDatabase } from '../../../../prisma/reset-seed';
 
 export async function GET() {
     try {
