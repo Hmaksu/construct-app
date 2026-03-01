@@ -13,6 +13,7 @@ export const mockUsers: User[] = [
 
 export const mockProjects: Project[] = [
     {
+        type: 'other',
         id: 'P-100',
         name: 'Istanbul Financial Center',
         location: 'Turkey, Istanbul',
@@ -27,6 +28,7 @@ export const mockProjects: Project[] = [
         progress: 35,
     },
     {
+        type: 'other',
         id: 'P-101',
         name: 'Ankara Tech Hub',
         location: 'Turkey, Ankara',
@@ -41,6 +43,7 @@ export const mockProjects: Project[] = [
         progress: 0,
     },
     {
+        type: 'other',
         id: 'P-102',
         name: 'Izmir Port Expansion',
         location: 'Turkey, Izmir',
@@ -55,6 +58,7 @@ export const mockProjects: Project[] = [
         progress: 15,
     },
     {
+        type: 'other',
         id: 'P-103',
         name: 'Berlin Central Station Renovation',
         location: 'Germany, Berlin',
@@ -69,6 +73,7 @@ export const mockProjects: Project[] = [
         progress: 45,
     },
     {
+        type: 'other',
         id: 'P-104',
         name: 'Munich Airport Terminal 3',
         location: 'Germany, Munich',
@@ -83,6 +88,7 @@ export const mockProjects: Project[] = [
         progress: 0,
     },
     {
+        type: 'other',
         id: 'P-105',
         name: 'New York Hudson Yards Extension',
         location: 'United States of America, New York',
@@ -97,6 +103,7 @@ export const mockProjects: Project[] = [
         progress: 60,
     },
     {
+        type: 'other',
         id: 'P-106',
         name: 'London Crossrail 2',
         location: 'United Kingdom, London',
@@ -111,6 +118,7 @@ export const mockProjects: Project[] = [
         progress: 0,
     },
     {
+        type: 'other',
         id: 'P-107',
         name: 'Paris Olympic Village Conversion',
         location: 'France, Paris',
@@ -125,6 +133,7 @@ export const mockProjects: Project[] = [
         progress: 20,
     },
     {
+        type: 'other',
         id: 'P-108',
         name: 'Tokyo Bay Bridge Maintenance',
         location: 'Japan, Tokyo',
@@ -139,6 +148,7 @@ export const mockProjects: Project[] = [
         progress: 100,
     },
     {
+        type: 'other',
         id: 'P-109',
         name: 'Sydney Metro Expansion',
         location: 'Australia, Sydney',
@@ -153,6 +163,7 @@ export const mockProjects: Project[] = [
         progress: 40
     },
     {
+        type: 'other',
         id: 'P-110',
         name: 'Toronto Pearson Terminal Revamp',
         location: 'Canada, Toronto',
